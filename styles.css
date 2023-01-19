@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);;
+}
+.heading
+{
+    max-width: 200px;
+    color: rgb(217, 205, 205);
+}
+
+.heading h1{
+    font-size: 6em;
+}
+
+.clock
+{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background: rgb(217, 225, 225);
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -55px -45px 20px  rgba(21, 22, 22, 0.05),
+     -20px 20px 30px rgba(125, 126, 126, 0.5),
+    inset -20px 20px 20px  rgba(50, 49, 49, 0.06), 
+    inset -20px -20px 25px rgba(148, 146, 147, 0.9) ;
+    transition: 0.5s ease;
+}
+
+.clock:hover{
+    transform: scale(1.1);
+}
+
+.clock::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background:rgb(217, 225, 225);
+    border-radius: 50%;
+    z-index: 1000;
+    box-shadow: 0 0 0 4px #1b1718,
+    0 0 0 5px rgb(217, 225, 225), 0 0 2px rgba(0,0,0,0.15);
+}
+
+.clock .numbers::after{
+    content: '';
+    position: absolute;
+    background: rgb(217, 225, 225);
+    inset: 40px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.clock .numbers{
+    position: absolute;
+    inset: 40px;
+    background: rgb(227, 182, 1);
+    border-radius: 50%;
+    border: 8px solid  rgb(222, 178, 1);
+}
+
+.clock .numbers span{
+    position: absolute;
+    text-align: center;
+    inset: 1px;
+    color: #fff;
+    font-size: 1.45em;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock .numbers span b{
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.clock .numbers::before{
+    content: '';
+    position: absolute;
+    border: 8px solid #ffffff;
+    padding: 40px;
+    border-radius: 50%;
+    inset: 35px;
+   /* animation: animate 2s linear infinite;*/
+}
+/*
+@keyframes animate{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}*/
+
+
+
+.clock .numbers .needle
+{
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.clock .numbers .needle i{
+    position: absolute;
+    width: 4px;
+    height: 50%;
+    background: rgb(10, 160, 180);
+    transform-origin: bottom;
+    transform: scaleY(0.7);
+}
+
+.clock .numbers .needle#hr i
+{
+    width: 5.5px;
+    transform: scaleY(0.44);
+    box-shadow: 0 30px 0 rgb(10, 160, 180) ;
+}
+.clock .numbers .needle#min i
+{
+    width: 4.2px;
+    transform: scaleY(0.7);
+    box-shadow: 0 30px 0 rgb(10, 160, 180) ;
+}
+.clock .numbers .needle#sec i
+{
+    width: 2px;
+    transform: scaleY(0.68);
+    background: #e91e63;
+    box-shadow: 0 30px 0 #e91e63 ;
+}
