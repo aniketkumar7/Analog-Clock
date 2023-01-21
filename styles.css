@@ -156,7 +156,7 @@ body {
 
 .clock .numbers .needle#sec i {
     width: 2px;
-    transform: scaleY(0.68);
+    transform: scaleY(0.65);
     background: #e91e63;
     box-shadow: 0 30px 0 #e91e63;
 }
