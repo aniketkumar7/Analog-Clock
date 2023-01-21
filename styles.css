@@ -137,7 +137,7 @@ body {
 
 .clock .numbers .needle#min i {
     width: 4.2px;
-    transform: scaleY(0.7);
+    transform: scaleY(0.73);
     box-shadow: 0 30px 0 rgb(10, 160, 180);
 }
 
