@@ -1,4 +1,4 @@
-# Analog-Clock Using HTML AND CSS AND JAVASCRIPT.
+# Analog Clock Using HTML AND CSS AND JAVASCRIPT
 
 This repository contains the source code of making Analog Clock Page using HTML and CSS and Javascript.
 <br>
