@@ -8,12 +8,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%,
-     #9b36b7 85%, #515ecf);    
+main{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/free-vector/prickly-juniper-branch-beige-gray-minimal-background_53876-113047.jpg?w=1380&t=st=1680947832~exp=1680948432~hmac=4d4344e7d01382b704ad711b7c3c4498d39f5039bb929177ca4ae1cce4732a6f);    
 }
 
 .container
@@ -35,7 +34,7 @@ body {
     font-size: 7em;
 }
 
-.clock {
+.clock{
     display: flex;
     max-width: 600px;
     justify-content: center;
@@ -107,7 +106,20 @@ body {
     padding: 40px;
     border-radius: 50%;
     inset: 35px;
+    /* animation: animate 2s linear infinite;*/
 }
+
+/*
+@keyframes animate{
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}*/
 
 
 
@@ -137,13 +149,13 @@ body {
 
 .clock .numbers .needle#min i {
     width: 4.2px;
-    transform: scaleY(0.73);
+    transform: scaleY(0.7);
     box-shadow: 0 30px 0 rgb(10, 160, 180);
 }
 
 .clock .numbers .needle#sec i {
     width: 2px;
-    transform: scaleY(0.65);
+    transform: scaleY(0.68);
     background: #e91e63;
     box-shadow: 0 30px 0 #e91e63;
 }
@@ -159,8 +171,8 @@ body {
     }
 
     .clock{
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     .heading {
