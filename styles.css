@@ -12,6 +12,7 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
+    overflow-x: hidden;
     background-image: url(https://img.freepik.com/free-vector/prickly-juniper-branch-beige-gray-minimal-background_53876-113047.jpg?w=1380&t=st=1680947832~exp=1680948432~hmac=4d4344e7d01382b704ad711b7c3c4498d39f5039bb929177ca4ae1cce4732a6f);    
 }
 
@@ -27,7 +28,7 @@ main{
 .heading {
     max-width: 600px;
     width: 400px;
-    color: rgb(217, 205, 205);
+    color: rgb(151, 146, 146);
 }
 
 .heading h1 {
@@ -106,20 +107,7 @@ main{
     padding: 40px;
     border-radius: 50%;
     inset: 35px;
-    /* animation: animate 2s linear infinite;*/
 }
-
-/*
-@keyframes animate{
-    0%
-    {
-        transform: rotate(360deg);
-    }
-    100%
-    {
-        transform: rotate(0deg);
-    }
-}*/
 
 
 
@@ -160,32 +148,48 @@ main{
     box-shadow: 0 30px 0 #e91e63;
 }
 
+    
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px){
     .container{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 80px;
-    }
-
-    .clock{
-        width: 200px;
-        height: 200px;
-    }
-
-    .heading {
-        font-size: 0.5em;
-    }
-}
-
-@media screen and (max-width: 1200px){
-    .container{
         gap: 50px;
     }
+
     .clock{
         width: 450px;
         height: 450px;
     }
+
 }
+
+@media screen and (max-width: 600px) {
+
+    main{
+        background-position: center;
+    }
+    
+    .clock{
+        width: 320px;
+        height: 320px;
+    }
+
+
+    .heading h1{
+        font-size: 4em;
+        margin-left: 4.5rem;
+    }
+
+    .clock .numbers{
+        inset: 20px;
+    }
+
+    .clock .numbers span{
+        font-size: 1.2rem;
+    }
+
+}
+
